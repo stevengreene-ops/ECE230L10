@@ -26,6 +26,8 @@ Lastly, we created a T-flip flop with mostly the same logic as a D and JK flip f
 
 ### What is difference between edge and level sensitive circuits?
 
+For level sensitive circuits, the data and output coincide when the whole clock timing is high. The circuits would only change their output when certain signals were high. This meant those circuits were synchronous to whatever signal enabled them to change. An edge sensitive circuit will only accept data at the positive or negative edge of the clock, and the store that data until the next positive, or negative edge occurs (whichever edge you specify in the code).** Level sensitive memory stores the input value as long as its enable signal is high. An edge sensitive one stores the input value only when the enable transitions from low to high — the edge. **
+
 ### Why is it important to declare initial state?
 Declaring an initial state is critical because hardware memory elements like flip-flops have no default value upon power-up. Without an initial state, these components may start in a random condition, leading to undefined behavior where the logic fails to execute correctly. Setting a known starting point ensures that your physical implementation matches the simulation and allows the edge sensitive transitions to begin from a predictable and stable value.
 
